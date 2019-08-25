@@ -1,6 +1,6 @@
 #Author: Tazirina Awwal
 #Keywords Summary :
-#Feature: List of scenarios.
+#Feature: Two attempts of Login and one new user Signup
 #Scenario: Business rule through list of steps with arguments.
 #Given: Some precondition step
 #When: Some key actions
@@ -15,17 +15,25 @@
 #<> (placeholder)
 #""
 ## (Comments)
-#Sample Feature Definition Template
+
 
 Feature: Test Facebook Smoke Scenario
   
+  ## First Login Attempt
   	Scenario: Test login with valid credentials
     Given Open Chrome and Start Application
-    When I Enter a Valid "taz@avwonders.com" and Valid "taz2019"
+    When I Enter a Valid "pntautomation@pnt.com" and Valid "12345"
     Then User should be able to Login Successfully
    
+  ## Second Login Attempt 
 		Scenario: Test login with valid credentials
     Given Open Chrome and Start Application
-    When I Enter a Valid "taz2@avwonders.com" and Valid "taz22019"
+    When I Enter a Valid "pnt@test-qa.com" and Valid "Facebook$"
     Then User should be able to Login Successfully
+    
+  ## New User SignUp
+    Scenario: Test login with valid credentials
+    Given Open Chrome and Start Application
+    When I Enter a Valid "Pnt" and Valid "Student" and Valid "pnt@test-qa.com" and Valid "Facebook$" and Valid "Sep" and Valid "10" and Valid "20"
+    Then User should be able to Signup Successfully
   
